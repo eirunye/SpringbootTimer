@@ -35,12 +35,12 @@ public class CompleteScheduleConfig implements SchedulingConfigurer {
 
         scheduledTaskRegistrar.addTriggerTask(() -> {
             Student student = new Student();
-            int i = 0;
+        
             student.setName("ok");
             student.setAge(12);
             student.setSex("nan");
             studentRepository.save(student);
-            System.out.println("=====" + i++);
+            System.out.println("===插入成功!===";
         }, triggerContext -> {
             return new CronTrigger(DEFAULT_CRON).nextExecutionTime(triggerContext);
         });

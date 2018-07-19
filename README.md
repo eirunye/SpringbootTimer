@@ -2,7 +2,7 @@
   
   ### 1、Spring boot 定时器的运用
       
-      >主要是添加注解的方式进行
+  >主要是添加注解的方式进行
       
          
           1、在Application中添加
@@ -25,9 +25,9 @@
           @Override
           public void configureTasks(ScheduledTaskRegistrar scheduledTaskRegistrar) {
 
-//        scheduledTaskRegistrar.scheduleFixedDelayTask(new FixedDelayTask(() -> {
-//
-//        }, 10000, 1000 * 60));
+          //        scheduledTaskRegistrar.scheduleFixedDelayTask(new FixedDelayTask(() -> {
+          //
+          //        }, 10000, 1000 * 60));
 
           scheduledTaskRegistrar.addTriggerTask(() -> {
             Student student = new Student();

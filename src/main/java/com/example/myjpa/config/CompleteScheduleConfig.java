@@ -40,7 +40,7 @@ public class CompleteScheduleConfig implements SchedulingConfigurer {
             student.setAge(12);
             student.setSex("nan");
             studentRepository.save(student);
-            System.out.println("===插入成功!===";
+            System.out.println("===插入成功!===");
         }, triggerContext -> {
             return new CronTrigger(DEFAULT_CRON).nextExecutionTime(triggerContext);
         });

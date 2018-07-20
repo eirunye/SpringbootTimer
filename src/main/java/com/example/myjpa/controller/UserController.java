@@ -21,14 +21,10 @@ public class UserController {
     MoanRepository moanRepository;
 
     @PostMapping(value = "save/moan")
-    public List<Moan> saveMoan(@Valid Moan moan) {
+    public int saveMoan(@Valid Moan moan) {
 
         moanRepository.save(moan);
 
-        return null;
+        return 0;
     }
-
-
-
-
 }
